@@ -1,0 +1,126 @@
+<!-- header.component.html -->
+<header
+  class="flex flex-row justify-center items-center px-10 py-2.5 gap-2.5 w-full h-[116px] absolute left-1/2 transform -translate-x-1/2 top-0 bg-white"
+>
+  <!-- Logo Section -->
+  <div
+    class="flex flex-row items-center gap-2.5 w-[213px] h-24 flex-none order-none"
+  >
+    <h1
+      class="w-[213px] h-24 font-['Catchy_Melody'] font-normal text-5xl leading-[48px] text-center tracking-[0.02em] text-[#FFEDC4] border-2 border-[#343B6E] shadow-[-1px_2px_0px_#343B6E]"
+    >
+      Crossing Knowledge
+    </h1>
+  </div>
+
+  <!-- Navigation Menu -->
+  <div
+    class="flex flex-row justify-center items-center gap-2.5 w-full h-11 flex-1 order-1"
+  >
+    <button
+      class="flex justify-center items-center px-5 py-3 gap-2.5 w-[83px] h-11 bg-[#FFE3A5] rounded-full"
+    >
+      <span
+        class="w-[43px] h-5 font-['Inter'] font-normal text-base leading-5 tracking-[-0.05em] text-[#343B6E]"
+        >About</span
+      >
+    </button>
+    <button
+      class="flex justify-center items-center px-5 py-3 gap-2.5 w-[100px] h-11 bg-[#FFE3A5] rounded-full"
+    >
+      <span
+        class="w-[60px] h-5 font-['Inter'] font-normal text-base leading-5 tracking-[-0.05em] text-[#343B6E]"
+        >Features</span
+      >
+    </button>
+    <button
+      class="flex justify-center items-center px-5 py-3 gap-2.5 w-[97px] h-11 bg-[#FFE3A5] rounded-full"
+    >
+      <span
+        class="w-[57px] h-5 font-['Inter'] font-normal text-base leading-5 tracking-[-0.05em] text-[#343B6E]"
+        >Security</span
+      >
+    </button>
+    <button
+      class="flex justify-center items-center px-5 py-3 gap-2.5 w-[87px] h-11 bg-[#FFE3A5] rounded-full"
+    >
+      <span
+        class="w-[47px] h-5 font-['Inter'] font-normal text-base leading-5 tracking-[-0.05em] text-[#343B6E]"
+        >Pricing</span
+      >
+    </button>
+    <button
+      class="flex justify-center items-center px-5 py-3 gap-2.5 w-[96px] h-11 bg-[#FFE3A5] rounded-full"
+    >
+      <span
+        class="w-[56px] h-5 font-['Inter'] font-normal text-base leading-5 tracking-[-0.05em] text-[#343B6E]"
+        >Contact</span
+      >
+    </button>
+  </div>
+
+  <!-- Right Section with Language, Demo, Get Started -->
+  <div
+    class="flex flex-row items-center gap-2.5 w-[371px] h-11 flex-none order-2"
+  >
+    <!-- Language Selector -->
+    <div
+      class="flex justify-center items-center px-5 py-3 gap-2.5 w-[116px] h-11 bg-[#FFE3A5] rounded-full"
+    >
+      <span
+        class="font-['Inter'] font-normal text-base leading-5 tracking-[-0.05em] text-[#343B6E]"
+        >{{ selectedLanguage }}</span
+      >
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4 6L8 10L12 6"
+          stroke="#343B6E"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+
+    <!-- Demo Button -->
+    <button
+      class="flex justify-center items-center px-5 py-3 gap-2.5 w-[83px] h-11 rounded-full"
+    >
+      <span
+        class="font-['Inter'] font-medium text-base leading-5 tracking-[-0.05em] text-[#343B6E]"
+        >Demo</span
+      >
+    </button>
+
+    <!-- Get Started Button -->
+    <button
+      class="flex justify-center items-center px-5 py-3 gap-2.5 w-[152px] h-11 bg-[#F15D41] border border-black border-b-0 shadow-[0_4px_1px_#343B6E] rounded-full"
+    >
+      <span
+        class="font-['Inter'] font-bold text-base leading-5 tracking-[-0.02em] text-white"
+        >Get started</span
+      >
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3 8H13M8 3V13"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+  </div>
+</header>

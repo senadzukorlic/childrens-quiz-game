@@ -1,0 +1,189 @@
+.sidebar-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px 12px 71px;
+  gap: 24px;
+  isolation: isolate;
+  position: absolute;
+  width: 260px;
+  height: 1080px;
+  left: 0px;
+  top: 0px;
+  background: #ffffff;
+  border-right: 1px solid #dfdfdf;
+}
+
+.logo {
+  width: 236px;
+  height: 58px;
+  font-family: "Catchy Melody";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ffedc4;
+  border: 1px solid #343b6e;
+  text-shadow: -1px 2px 0px #343b6e;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 0;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+  width: 236px;
+  height: 663px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 1;
+  z-index: 1;
+}
+
+.menu-item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  gap: 16px;
+  width: 236px;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 10px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  cursor: pointer;
+}
+
+.menu-item.active {
+  background: #fffadd;
+  border: 2px solid #ffd372;
+}
+
+.menu-item .icon {
+  width: 24px;
+  height: 24px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.menu-item span {
+  width: 164px;
+  height: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #343b6e;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.pro-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 12px;
+  gap: 16px;
+  width: 236px;
+  height: 216px;
+  background: linear-gradient(
+    236.03deg,
+    rgba(227, 92, 255, 0.1) 8.94%,
+    rgba(51, 135, 255, 0.1) 51.01%,
+    rgba(37, 236, 119, 0.1) 97.51%
+  );
+  border-radius: 10px;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.pro-section h2 {
+  width: 212px;
+  height: 48px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #343b6e;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.pro-section p {
+  width: 212px;
+  height: 60px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #707070;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.try-free-btn {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px;
+  gap: 10px;
+  width: 212px;
+  height: 44px;
+  background: #f15d41;
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  border-color: #000000;
+  box-shadow: 0px 4px 1px #343b6e;
+  border-radius: 10px;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  color: white;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+}
+
+.bear-mascot {
+  position: absolute;
+  width: 90.16px;
+  height: 94.31px;
+  left: -10.87px;
+  top: 989.55px;
+  /* background: url("assets/bear.png"); */
+  transform: rotate(11.62deg);
+}

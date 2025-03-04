@@ -1,1 +1,26 @@
-<p>side-layout works!</p>
+<div class="sidebar-container">
+  <div class="logo">
+    <h1>Crossing Knowledge</h1>
+  </div>
+
+  <div class="menu-items">
+    <div
+      *ngFor="let item of menuItems"
+      class="menu-item"
+      [ngClass]="{ active: item.isActive }"
+      (click)="navigateTo(item.route)"
+    >
+      <div class="icon">
+        <svg [innerHTML]="item.icon"></svg>
+      </div>
+      <span>{{ item.label }}</span>
+    </div>
+  </div>
+
+  <div class="pro-section">
+    <h2>Try Pro Edition for free</h2>
+    <p>No ads, personalized practice, and access to many teachers</p>
+    <button class="try-free-btn">Try 2 weeks free</button>
+    <div class="bear-mascot"></div>
+  </div>
+</div>

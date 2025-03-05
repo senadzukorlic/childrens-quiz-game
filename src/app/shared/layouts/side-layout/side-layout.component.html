@@ -11,7 +11,7 @@
       (click)="navigateTo(item.route)"
     >
       <div class="icon">
-        <svg [innerHTML]="item.icon"></svg>
+        <svg [innerHTML]="getSafeHtml(item.icon)"></svg>
       </div>
       <span>{{ item.label }}</span>
     </div>

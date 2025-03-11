@@ -1,0 +1,6 @@
+.homepage-container {
+  background: url("/assets/backgrounds/Home1.png");
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

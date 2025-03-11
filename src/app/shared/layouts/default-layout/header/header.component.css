@@ -1,0 +1,271 @@
+/* navigation-header.component.css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+/* You'll need to add the Catchy Melody font to your project if available */
+
+.frame-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  height: 116px;
+  margin: 0 auto;
+}
+
+.frame-4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 213px;
+  height: 96px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.company-name {
+  width: 213px;
+  height: 96px;
+  font-family: "Catchy Melody", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ffedc4;
+  text-shadow: -1px 2px 0px #343b6e;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frame-24 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 1236px;
+  height: 44px;
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+}
+
+.frame-3,
+.frame-5,
+.frame-6,
+.frame-10,
+.frame-11 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 10px;
+  height: 44px;
+  background: #ffe3a5;
+  border-radius: 100px;
+  flex: none;
+  flex-grow: 0;
+}
+
+.frame-3 {
+  width: 83px;
+  order: 0;
+}
+
+.frame-5 {
+  width: 100px;
+  order: 1;
+}
+
+.frame-6 {
+  width: 97px;
+  order: 2;
+}
+
+.frame-10 {
+  width: 87px;
+  order: 3;
+}
+
+.frame-11 {
+  width: 96px;
+  order: 4;
+}
+
+.nav-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.05em;
+  color: #343b6e;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.frame-23 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 371px;
+  height: 44px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.language-selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 10px;
+  width: 116px;
+  height: 44px;
+  background: #ffe3a5;
+  border-radius: 100px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.vector {
+  position: absolute;
+  left: 16.67%;
+  right: 16.66%;
+  top: 37.5%;
+  bottom: 29.17%;
+  border: 2px solid #343b6e;
+  transform: rotate(45deg);
+  width: 8px;
+  height: 8px;
+  border-left: none;
+  border-top: none;
+}
+
+.frame-12 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 10px;
+  width: 83px;
+  height: 44px;
+  border-radius: 100px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.demo-text {
+  width: 43px;
+  height: 20px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.05em;
+  color: #343b6e;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.frame-14 {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 10px;
+  width: 152px;
+  height: 44px;
+  background: #f15d41;
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  border-color: #000000;
+  box-shadow: 0px 4px 1px #343b6e;
+  border-radius: 100px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.get-started-text {
+  width: 86px;
+  height: 20px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.vector-arrow {
+  position: absolute;
+  left: 16.67%;
+  right: 16.66%;
+  top: 50%;
+  bottom: 50%;
+  border: 2px solid #ffffff;
+  width: 10px;
+}
+
+.vector-arrow-2 {
+  position: absolute;
+  left: 54.17%;
+  right: 16.66%;
+  top: 20.83%;
+  bottom: 20.83%;
+  border: 2px solid #ffffff;
+  width: 6px;
+  height: 6px;
+  transform: rotate(-45deg);
+  border-left: none;
+  border-bottom: none;
+}

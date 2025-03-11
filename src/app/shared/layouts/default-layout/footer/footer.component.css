@@ -1,0 +1,117 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 10px 48px;
+  gap: 72px;
+  width: 100%;
+  height: 396px;
+  margin-top: auto;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  width: 213px;
+  height: 96px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.company-name {
+  width: 213px;
+  height: 96px;
+  font-family: "Catchy Melody";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ffedc4;
+  text-shadow: -1px 2px 0px #343b6e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 40px;
+  width: 506px;
+  height: 80px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.links-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 92px;
+  width: 506px;
+  height: 20px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.footer-link {
+  height: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #594600;
+  text-decoration: none;
+  flex: none;
+}
+
+.footer-link:nth-child(1) {
+  width: 96px;
+  order: 0;
+  flex-grow: 0;
+}
+
+.footer-link:nth-child(2) {
+  width: 91px;
+  order: 1;
+  flex-grow: 0;
+}
+
+.footer-link:nth-child(3) {
+  width: 135px;
+  order: 2;
+  flex-grow: 0;
+}
+
+.copyright {
+  width: 278px;
+  height: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #000000;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}

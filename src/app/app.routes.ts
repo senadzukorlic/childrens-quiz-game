@@ -5,7 +5,9 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./pages/home/home.component').then((m) => m.HomeComponent),
+      import('./shared/layouts/default-layout/default-layout.component').then(
+        (m) => m.DefaultLayoutComponent
+      ),
   },
 
   // Second Layout with nested child routes

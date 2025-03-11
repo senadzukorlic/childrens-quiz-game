@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
 .sidebar-container {
   box-sizing: border-box;
   display: flex;
@@ -17,7 +19,7 @@
 .logo {
   width: 236px;
   height: 58px;
-  font-family: "Catchy Melody ";
+  font-family: "Catchy Melody", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;

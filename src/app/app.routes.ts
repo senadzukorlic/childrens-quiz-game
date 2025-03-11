@@ -18,7 +18,11 @@ export const routes: Routes = [
         (m) => m.SideLayoutComponent
       ),
   },
-
+  {
+    path: 'log-in',
+    loadComponent: () =>
+      import('./pages/login/login.component').then((m) => m.LoginComponent),
+  },
   // Default redirect
 
   // Wildcard route for 404

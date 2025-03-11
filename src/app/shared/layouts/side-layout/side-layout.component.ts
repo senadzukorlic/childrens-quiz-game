@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-side-layout',
   imports: [CommonModule, RouterModule],
@@ -12,161 +11,62 @@ export class SideLayoutComponent {
   menuItems = [
     {
       label: 'Home',
-      icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_2050_726)">
-<path d="M12 14.9927C10.3432 14.9927 9 16.3358 9 17.9927V23.9927H15V17.9927C15 16.3358 13.6568 14.9927 12 14.9927Z" fill="#343B6E"/>
-<path d="M17 17.9926V23.9926H21C22.6568 23.9926 24 22.6495 24 20.9926V11.8716C24.0002 11.3521 23.7983 10.8529 23.437 10.4796L14.939 1.29261C13.4396 -0.329735 10.9089 -0.429344 9.28655 1.07009C9.20949 1.14134 9.13523 1.21555 9.06403 1.29261L0.581016 10.4766C0.208734 10.8515 -0.000140554 11.3584 7.09607e-08 11.8866V20.9926C7.09607e-08 22.6495 1.34316 23.9926 3 23.9926H6.99998V17.9926C7.01869 15.2658 9.22027 13.0391 11.8784 12.9749C14.6255 12.9087 16.9791 15.1733 17 17.9926Z" fill="#343B6E"/>
-<path d="M12 14.9927C10.3432 14.9927 9 16.3358 9 17.9927V23.9927H15V17.9927C15 16.3358 13.6568 14.9927 12 14.9927Z" fill="#343B6E"/>
-</g>
-<defs>
-<clipPath id="clip0_2050_726">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-
-`,
+      iconUrl: 'assets/icons/navigation/home.svg',
+      activeIconUrl: 'assets/icons/navigation/home-active.svg',
       route: '/home',
-      isActive: true,
+      isActive: false,
     },
     {
       label: 'Lessons',
-      icon: `
-       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_2050_749)">
-<path d="M12 24C11.445 24 10.891 23.923 10.352 23.769L3.626 21.848C1.491 21.238 0 19.261 0 17.04V3.99997C0 3.44797 0.448 2.99997 1 2.99997C1.552 2.99997 2 3.44797 2 3.99997V17.04C2 18.373 2.895 19.559 4.176 19.925L10.902 21.846C11.621 22.051 12.38 22.051 13.1 21.846L19.825 19.925C21.106 19.559 22.001 18.373 22.001 17.04V2.99997C22.001 2.44797 22.449 1.99997 23.001 1.99997C23.553 1.99997 24.001 2.44797 24.001 2.99997V17.04C24.001 19.26 22.51 21.237 20.375 21.848L13.649 23.769C13.109 23.923 12.555 24 12.001 24H12ZM18.023 0.154971C17.295 -0.114029 16.484 -0.0470291 15.763 0.240971L14.886 0.590971C13.747 1.04597 12.999 2.14997 12.999 3.37697V17.873C12.671 17.957 12.336 18 11.999 18C11.662 18 11.327 17.957 10.999 17.873V3.37697C10.999 2.14997 10.252 1.04597 9.112 0.590971L8.234 0.239971C7.513 -0.0480292 6.702 -0.115029 5.974 0.154971C4.759 0.604971 3.998 1.73797 3.998 2.97697V15.691C3.998 17.03 4.886 18.207 6.173 18.575L10.349 19.769C10.887 19.922 11.442 19.999 11.997 19.999C12.552 19.999 13.107 19.922 13.645 19.769L17.821 18.575C19.109 18.207 19.996 17.03 19.996 15.691V2.97697C19.996 1.73797 19.234 0.603971 18.019 0.154971H18.023Z" fill="#707070"/>
-</g>
-<defs>
-<clipPath id="clip0_2050_749">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-
-      `,
+      iconUrl: 'assets/icons/navigation/lessons.svg',
+      activeIconUrl: 'assets/icons/navigation/lessons-active.svg',
       route: '/lessons',
       isActive: false,
     },
     {
       label: 'Schedule',
-      icon: `
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_2050_710)">
-<path d="M18.5 2H18V1.5C18 1.10218 17.842 0.720644 17.5607 0.43934C17.2794 0.158035 16.8978 0 16.5 0C16.1022 0 15.7206 0.158035 15.4393 0.43934C15.158 0.720644 15 1.10218 15 1.5V2H9V1.5C9 1.10218 8.84196 0.720644 8.56066 0.43934C8.27936 0.158035 7.89782 0 7.5 0C7.10218 0 6.72064 0.158035 6.43934 0.43934C6.15804 0.720644 6 1.10218 6 1.5V2H5.5C4.04131 2 2.64236 2.57946 1.61091 3.61091C0.579463 4.64236 0 6.04131 0 7.5L0 18.5C0 19.9587 0.579463 21.3576 1.61091 22.3891C2.64236 23.4205 4.04131 24 5.5 24H18.5C19.9587 24 21.3576 23.4205 22.3891 22.3891C23.4205 21.3576 24 19.9587 24 18.5V7.5C24 6.04131 23.4205 4.64236 22.3891 3.61091C21.3576 2.57946 19.9587 2 18.5 2ZM18.5 21H5.5C4.83696 21 4.20107 20.7366 3.73223 20.2678C3.26339 19.7989 3 19.163 3 18.5V10H21V18.5C21 19.163 20.7366 19.7989 20.2678 20.2678C19.7989 20.7366 19.163 21 18.5 21Z" fill="#707070"/>
-</g>
-<defs>
-<clipPath id="clip0_2050_710">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-
-      `,
+      iconUrl: 'assets/icons/navigation/schedule.svg',
+      activeIconUrl: 'assets/icons/navigation/schedule-active.svg',
       route: '/schedule',
       isActive: false,
     },
     {
       label: 'Inbox',
-      icon: `
-       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_2050_740)">
-<path d="M5.52148 19.9H10.8435L14.3625 23.4151C14.5516 23.6052 14.7765 23.7561 15.0241 23.8591C15.2717 23.9621 15.5373 24.0151 15.8055 24.015C15.9819 24.0148 16.1577 23.9923 16.3285 23.948C16.6737 23.8609 16.9899 23.6843 17.2452 23.4361C17.5004 23.1879 17.6858 22.8767 17.7825 22.534L23.9895 1.42505L5.52148 19.9Z" fill="#707070"/>
-<path d="M4.08703 18.5L22.572 0.0119629L1.47803 6.23296C1.13457 6.33064 0.822612 6.51642 0.573111 6.77187C0.323609 7.02733 0.145234 7.34358 0.0556829 7.68925C-0.0338682 8.03492 -0.0314835 8.398 0.0626007 8.74246C0.156685 9.08693 0.339198 9.40081 0.592034 9.65296L4.08703 13.145V18.5Z" fill="#707070"/>
-</g>
-<defs>
-<clipPath id="clip0_2050_740">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-
-      `,
+      iconUrl: 'assets/icons/navigation/inbox.svg',
+      activeIconUrl: 'assets/icons/navigation/inbox-active.svg',
       route: '/inbox',
       isActive: false,
     },
     {
       label: 'Shop',
-      icon: `
-       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_2050_702)">
-<path d="M23.9624 7.725L22.7904 3.626C22.1804 1.491 20.2024 0 17.9824 0H17.0004V4C16.9944 5.308 15.0054 5.307 15.0004 4V0H9.00039V4C8.99439 5.308 7.00639 5.307 7.00039 4V0H6.01739C3.79739 0 1.82039 1.491 1.20939 3.626L0.0393925 7.725C-0.121607 8.791 0.353392 9.863 1.00039 10.618V20C1.00039 22.206 2.79439 24 5.00039 24H11.0004C13.2064 24 15.0004 22.206 15.0004 20V11.444C15.3784 11.223 15.7144 10.946 16.0004 10.618C16.7344 11.458 17.7994 12 19.0004 12H20.0004C20.3474 12 20.6784 11.942 21.0004 11.858V23C21.0064 24.308 22.9954 24.307 23.0004 23V10.618C23.6484 9.864 24.1224 8.792 23.9624 7.725ZM13.0004 17H3.00039V11.858C3.32239 11.942 3.65339 12 4.00039 12H5.00039C6.20039 12 7.26639 11.458 8.00039 10.618C8.73439 11.458 9.80039 12 11.0004 12H13.0004V17Z" fill="#707070"/>
-</g>
-<defs>
-<clipPath id="clip0_2050_702">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-
-      `,
+      iconUrl: 'assets/icons/navigation/shop.svg',
+      activeIconUrl: 'assets/icons/navigation/shop-active.svg',
       route: '/shop',
       isActive: false,
     },
     {
       label: 'Profile',
-      icon: `
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_2050_693)">
-<path d="M16.043 14H7.957C6.64281 14.0016 5.3829 14.5244 4.45363 15.4536C3.52435 16.3829 3.00159 17.6428 3 18.957V24H21V18.957C20.9984 17.6428 20.4756 16.3829 19.5464 15.4536C18.6171 14.5244 17.3572 14.0016 16.043 14Z" fill="#707070"/>
-<path d="M12 12C15.3137 12 18 9.31371 18 6C18 2.68629 15.3137 0 12 0C8.68629 0 6 2.68629 6 6C6 9.31371 8.68629 12 12 12Z" fill="#707070"/>
-</g>
-<defs>
-<clipPath id="clip0_2050_693">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-
-      `,
+      iconUrl: 'assets/icons/navigation/profile.svg',
+      activeIconUrl: 'assets/icons/navigation/profile-active.svg',
       route: '/profile',
+
       isActive: false,
     },
     {
       label: 'Logout',
-      icon: `
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_2059_605)">
-<path d="M23.1172 9.87895L18.1672 4.92896L16.0462 7.04996L19.5002 10.5H6.61719V13.5H19.5002L16.0502 16.95L18.1712 19.071L23.1212 14.121C23.6831 13.5578 23.9983 12.7946 23.9975 11.9991C23.9968 11.2036 23.6801 10.441 23.1172 9.87895Z" fill="#707070"/>
-<path d="M9.99386 20.5C9.99386 20.6326 9.94118 20.7598 9.84741 20.8536C9.75364 20.9473 9.62647 21 9.49386 21H3.50586C3.37325 21 3.24607 20.9473 3.15231 20.8536C3.05854 20.7598 3.00586 20.6326 3.00586 20.5V3.53101C3.00586 3.3984 3.05854 3.27122 3.15231 3.17745C3.24607 3.08368 3.37325 3.03101 3.50586 3.03101H9.49386C9.62647 3.03101 9.75364 3.08368 9.84741 3.17745C9.94118 3.27122 9.99386 3.3984 9.99386 3.53101V8.34501H12.9939V3.53101C12.9925 2.60315 12.6234 1.71368 11.9673 1.05759C11.3112 0.401502 10.4217 0.0323285 9.49386 0.0310059H3.50586C2.57801 0.0323285 1.68854 0.401502 1.03245 1.05759C0.376356 1.71368 0.00718205 2.60315 0.00585938 3.53101V20.5C0.00585938 21.4283 0.374608 22.3185 1.03099 22.9749C1.68736 23.6313 2.5776 24 3.50586 24H9.49386C10.4221 24 11.3124 23.6313 11.9687 22.9749C12.6251 22.3185 12.9939 21.4283 12.9939 20.5V15.683H9.99386V20.5Z" fill="#707070"/>
-</g>
-<defs>
-<clipPath id="clip0_2059_605">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-</svg>
-
-    `,
+      iconUrl: 'assets/icons/navigation/signOut.svg',
+      activeIconUrl: 'assets/icons/navigation/signOut-active.svg',
       route: '/logout',
       isActive: false,
     },
   ];
 
-  // constructor(private router: Router) {}
-  constructor(private sanitizer: DomSanitizer) {}
-  getSafeHtml(svgContent: string) {
-    return this.sanitizer.bypassSecurityTrustHtml(svgContent);
-  }
   navigateTo(route: string) {
-    // Deactivate all menu items
     this.menuItems.forEach((item) => (item.isActive = false));
 
-    // Activate the selected menu item
     const selectedItem = this.menuItems.find((item) => item.route === route);
     if (selectedItem) {
       selectedItem.isActive = true;
     }
-
-    // Handle special routes
-    // if (route === '/logout') {
-    //   // Implement logout logic here
-    //   console.log('Logging out...');
-    //   // For example: this.authService.logout()
-    //   this.router.navigate(['/login']);
-    //   return;
-    // }
-
-    // // Navigate to the selected route
-    // this.router.navigate([route]);
   }
 }

@@ -11,14 +11,13 @@
   height: 1080px;
   left: 0px;
   top: 0px;
-  background: #ffffff;
   border-right: 1px solid #dfdfdf;
 }
 
 .logo {
   width: 236px;
   height: 58px;
-  font-family: "Catchy Melody";
+  font-family: "Catchy Melody ";
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -26,7 +25,6 @@
   text-align: center;
   letter-spacing: 0.02em;
   color: #ffedc4;
-  /* border: 1px solid #343b6e; */
   text-shadow: -1px 2px 0px #343b6e;
   flex: none;
   order: 0;
@@ -180,10 +178,9 @@
 
 .bear-mascot {
   position: absolute;
-  width: 90.16px;
-  height: 94.31px;
-  left: -10.87px;
-  top: 989.55px;
-  /* background: url("../../../../assets/bear.png"); */
+  width: 166.52px;
+  height: 100.37px;
+  left: -60.87px;
+  top: 209.55px;
   transform: rotate(11.62deg);
 }

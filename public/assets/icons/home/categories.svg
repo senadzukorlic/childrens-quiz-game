@@ -1,0 +1,13 @@
+ <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+          >
+            <path d="M0 0h6v6H0V0z" fill="#343B6E" />
+            <path d="M10 0h6v6h-6V0z" fill="#343B6E" />
+            <path d="M0 10h6v6H0v-6z" fill="#343B6E" />
+            <path d="M10 10h6v6h-6v-6z" fill="#343B6E" />
+          </svg>

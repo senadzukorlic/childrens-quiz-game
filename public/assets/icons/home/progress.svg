@@ -1,0 +1,13 @@
+ <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+          >
+            <path
+              d="M8 0C8 0 3 3 3 8V14L6 11H10L13 14V8C13 3 8 0 8 0Z"
+              fill="#F15D41"
+            />
+          </svg>

@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
 import { DefaultLayoutComponent } from './shared/layouts/default-layout/default-layout.component';
 import { SideLayoutComponent } from './shared/layouts/side-layout/side-layout.component';
-import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SignInComponent } from './pages/sign-in/sign-in.component';
 
 export const routes: Routes = [
   {
@@ -25,11 +26,14 @@ export const routes: Routes = [
     ],
   },
   {
-    path: 'login',
-    component: LoginComponent,
+    path: 'register',
+    component: RegisterComponent,
+  },
+  {
+    path: 'sign-in',
+    component: SignInComponent,
   },
 
-  // Wildcard route for 404
   //   {
   //     path: '**',
   //     loadComponent: () =>

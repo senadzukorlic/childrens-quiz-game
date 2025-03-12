@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
+import { MenuItems } from '../../../core/config/config.menu';
 @Component({
   selector: 'app-side-layout',
   imports: [CommonModule, RouterModule],
@@ -8,59 +9,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './side-layout.component.css',
 })
 export class SideLayoutComponent {
-  menuItems = [
-    {
-      label: 'Home',
-      iconUrl: 'assets/icons/navigation/home.svg',
-      activeIconUrl: 'assets/icons/navigation/home-active.svg',
-      route: '/home',
-      isActive: false,
-    },
-    {
-      label: 'Lessons',
-      iconUrl: 'assets/icons/navigation/lessons.svg',
-      activeIconUrl: 'assets/icons/navigation/lessons-active.svg',
-      route: '/lessons',
-      isActive: false,
-    },
-    {
-      label: 'Schedule',
-      iconUrl: 'assets/icons/navigation/schedule.svg',
-      activeIconUrl: 'assets/icons/navigation/schedule-active.svg',
-      route: '/schedule',
-      isActive: false,
-    },
-    {
-      label: 'Inbox',
-      iconUrl: 'assets/icons/navigation/inbox.svg',
-      activeIconUrl: 'assets/icons/navigation/inbox-active.svg',
-      route: '/inbox',
-      isActive: false,
-    },
-    {
-      label: 'Shop',
-      iconUrl: 'assets/icons/navigation/shop.svg',
-      activeIconUrl: 'assets/icons/navigation/shop-active.svg',
-      route: '/shop',
-      isActive: false,
-    },
-    {
-      label: 'Profile',
-      iconUrl: 'assets/icons/navigation/profile.svg',
-      activeIconUrl: 'assets/icons/navigation/profile-active.svg',
-      route: '/profile',
-
-      isActive: false,
-    },
-    {
-      label: 'Logout',
-      iconUrl: 'assets/icons/navigation/signOut.svg',
-      activeIconUrl: 'assets/icons/navigation/signOut-active.svg',
-      route: '/logout',
-      isActive: false,
-    },
-  ];
-
+  constructor(private router: Router) {}
+  menuItems = MenuItems;
   navigateTo(route: string) {
     this.menuItems.forEach((item) => (item.isActive = false));
 
@@ -68,5 +18,6 @@ export class SideLayoutComponent {
     if (selectedItem) {
       selectedItem.isActive = true;
     }
+    this.router.navigate([route]);
   }
 }

@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+.main-content {
+  position: absolute;
+  left: 260px;
+  top: 0;
+  width: calc(100% - 260px);
+  height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
 
 .sidebar-container {
   box-sizing: border-box;

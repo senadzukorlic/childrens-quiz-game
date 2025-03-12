@@ -1,29 +1,33 @@
 import { Routes } from '@angular/router';
+import { DefaultLayoutComponent } from './shared/layouts/default-layout/default-layout.component';
+import { SideLayoutComponent } from './shared/layouts/side-layout/side-layout.component';
+import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
-  // First Layout with nested child routes
   {
     path: '',
-    loadComponent: () =>
-      import('./shared/layouts/default-layout/default-layout.component').then(
-        (m) => m.DefaultLayoutComponent
-      ),
-  },
-
-  // Second Layout with nested child routes
-  {
-    path: 'second-layout',
-    loadComponent: () =>
-      import('./shared/layouts/side-layout/side-layout.component').then(
-        (m) => m.SideLayoutComponent
-      ),
+    component: DefaultLayoutComponent,
   },
   {
-    path: 'log-in',
-    loadComponent: () =>
-      import('./pages/login/login.component').then((m) => m.LoginComponent),
+    path: '',
+    component: SideLayoutComponent,
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        component: HomeComponent, // This makes Home the default page
+      },
+      {
+        path: 'home',
+        component: HomeComponent,
+      },
+    ],
   },
-  // Default redirect
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
 
   // Wildcard route for 404
   //   {

@@ -1,0 +1,79 @@
+/* category-card.component.css */
+.category-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 24px;
+  gap: 10px;
+  isolation: isolate;
+  width: 377px;
+  height: 200px;
+  background: #ffffff;
+  border: 4px solid #dfdfdf;
+  box-shadow: 0px 8px 0px #dfdfdf;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cloud-background {
+  position: absolute;
+  width: 224.23px;
+  height: 224.23px;
+  left: 168.83px;
+  top: 33.14px;
+  transform: rotate(-4deg);
+  background-image: url('../../../../../public/assets/icons/overview/cloudss.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.card-title {
+  width: auto;
+  max-width: 70%;
+  height: 24px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #343b6e;
+  z-index: 1;
+}
+
+.card-icon {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-icon.left {
+  left: 24px;
+  top: 70%;
+  transform: translateY(-50%);
+}
+
+.card-icon.center {
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.card-icon.right {
+  right: 24px;
+  top: 70%;
+  transform: translateY(-50%);
+}
+
+.card-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}

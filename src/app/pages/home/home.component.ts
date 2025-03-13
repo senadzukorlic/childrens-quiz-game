@@ -1,20 +1,14 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {OverviewComponent} from './overview/overview.component';
+import {MainComponent} from './main/main.component';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule],
+  imports: [OverviewComponent, MainComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   standalone: true,
 })
 export class HomeComponent {
-  stats = {
-    inProgress: 1,
-    lessonsCompleted: 10,
-    categoriesCompleted: 4,
-    achievements: 5,
-  };
 
-  notificationCount: number = 1;
 }

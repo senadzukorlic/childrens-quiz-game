@@ -1,0 +1,15 @@
+<div class="main-container">
+  <div class="lessons-header">
+    <h2 class="lessons-title">Lessons</h2>
+    <p class="lessons-subtitle">Choose a category to begin a lesson.</p>
+  </div>
+
+  <div class="category-grid">
+    <app-category-cards
+      *ngFor="let category of categories"
+      [title]="category.title"
+      [iconSrc]="category.icon"
+      [iconPosition]="'right'">
+    </app-category-cards>
+  </div>
+</div>

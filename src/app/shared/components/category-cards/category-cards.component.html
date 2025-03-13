@@ -1,0 +1,22 @@
+<div
+  class="category-card"
+  [style.width.px]="cardWidth"
+  [style.height.px]="cardHeight"
+  [style.background]="backgroundColor"
+>
+  <div class="cloud-background"></div>
+
+  <div class="card-title">
+    {{ title }}
+  </div>
+
+  <div
+    class="card-icon"
+    [ngClass]="iconPosition"
+    [style.width.px]="iconWidth"
+    [style.height.px]="iconHeight"
+  >
+    <img [src]="iconSrc" [alt]="title" *ngIf="iconSrc" />
+    <ng-content *ngIf="!iconSrc"></ng-content>
+  </div>
+</div>

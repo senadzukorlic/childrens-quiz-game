@@ -9,7 +9,9 @@
       *ngFor="let category of categories"
       [title]="category.title"
       [iconSrc]="category.icon"
-      [iconPosition]="'right'">
+      [iconPosition]="'right'"
+      [routerLink]="category.route"
+    >
     </app-category-cards>
   </div>
 </div>

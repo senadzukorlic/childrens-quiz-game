@@ -1,4 +1,22 @@
-<app-games-header
-  [subtitle]="'Select the shapes that match the word.'"
-  [mainTitle]="'Hear the sound and match it to the letter'"
-/>
+<div
+  style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: aqua;
+    height: 100%;
+  "
+>
+  <app-games-header
+    [subtitle]="'Select the shapes that match the word.'"
+    [mainTitle]="'Hear the sound and match it to the letter'"
+  />
+  <div>
+    <app-category-cards
+      [cardHeight]="80"
+      [cardWidth]="80"
+      *ngFor="let word of words"
+    />
+  </div>
+</div>

@@ -25,7 +25,7 @@ export const routes: Routes = [
         component: HomeComponent,
       },
       {
-        path: 'games/colletct-the-words',
+        path: 'lessons/colletct-the-words',
         component: ColletctTheWordsComponent,
       },
     ],

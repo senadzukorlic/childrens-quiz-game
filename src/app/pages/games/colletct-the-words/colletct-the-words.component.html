@@ -1,4 +1,4 @@
-<div
+<!-- <div
   style="
     display: flex;
     flex-direction: column;
@@ -7,16 +7,21 @@
     background-color: aqua;
     height: 100%;
   "
+> -->
+<app-headers
+  [SubTitle]="'Select the shapes that match the word.'"
+  [MainTitle]="'Hear the sound and match it to the letter'"
 >
-  <app-games-header
-    [subtitle]="'Select the shapes that match the word.'"
-    [mainTitle]="'Hear the sound and match it to the letter'"
-  />
-  <div>
+  <button class="frame-2912">
+    <span class="skip-text">Skip</span>
+  </button></app-headers
+>
+<!-- <div>
+    @for(word of words;track word.id){
     <app-category-cards
       [cardHeight]="80"
       [cardWidth]="80"
-      *ngFor="let word of words"
-    />
-  </div>
-</div>
+      [title]="word.letters"
+    />}
+  </div> -->
+<!-- </div> -->

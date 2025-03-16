@@ -7,67 +7,67 @@ export type Words = {
 export const WORDS: Words[] = [
   {
     id: 1,
-    word: 'banana',
-    letters: ['b', 'a', 'n', 'a', 'n', 'a'],
+    word: 'banana', // todo: permute the letters
+    letters: ['n', 'b', 'a', 'a', 'n', 'a'],
   },
   {
     id: 2,
     word: 'rabbit',
-    letters: ['r', 'a', 'b', 'b', 'i', 't'],
+    letters: ['b', 't', 'r', 'i', 'a', 'b'],
   },
   {
     id: 3,
     word: 'yellow',
-    letters: ['y', 'e', 'l', 'l', 'o', 'w'],
+    letters: ['o', 'l', 'w', 'l', 'y', 'e'],
   },
   {
     id: 4,
     word: 'winter',
-    letters: ['w', 'i', 'n', 't', 'e', 'r'],
+    letters: ['n', 'r', 't', 'w', 'e', 'i'],
   },
   {
     id: 5,
     word: 'garden',
-    letters: ['g', 'a', 'r', 'd', 'e', 'n'],
+    letters: ['d', 'r', 'a', 'g', 'n', 'e'],
   },
   {
     id: 6,
     word: 'circle',
-    letters: ['c', 'i', 'r', 'c', 'l', 'e'],
+    letters: ['c', 'e', 'r', 'c', 'l', 'i'],
   },
   {
     id: 7,
     word: 'pencil',
-    letters: ['p', 'e', 'n', 'c', 'i', 'l'],
+    letters: ['n', 'c', 'p', 'e', 'l', 'i'],
   },
   {
     id: 8,
     word: 'purple',
-    letters: ['p', 'u', 'r', 'p', 'l', 'e'],
+    letters: ['r', 'p', 'p', 'u', 'e', 'l'],
   },
   {
     id: 9,
     word: 'butterfly',
-    letters: ['b', 'u', 't', 't', 'e', 'r', 'f', 'l', 'y'],
+    letters: ['f', 'b', 'y', 'r', 't', 't', 'u', 'l', 'e'],
   },
   {
     id: 10,
     word: 'elephant',
-    letters: ['e', 'l', 'e', 'p', 'h', 'a', 'n', 't'],
+    letters: ['h', 'a', 'e', 'p', 't', 'l', 'e', 'n'],
   },
   {
     id: 11,
     word: 'strawberry',
-    letters: ['s', 't', 'r', 'a', 'w', 'b', 'e', 'r', 'r', 'y'],
+    letters: ['b', 'w', 'r', 't', 'r', 'e', 's', 'y', 'a', 'r'],
   },
   {
     id: 12,
     word: 'umbrella',
-    letters: ['u', 'm', 'b', 'r', 'e', 'l', 'l', 'a'],
+    letters: ['r', 'b', 'l', 'l', 'a', 'm', 'e', 'u'],
   },
   {
     id: 13,
     word: 'chocolate',
-    letters: ['c', 'h', 'o', 'c', 'o', 'l', 'a', 't', 'e'],
+    letters: ['o', 'c', 'h', 'o', 'a', 'e', 'c', 't', 'l'],
   },
 ];

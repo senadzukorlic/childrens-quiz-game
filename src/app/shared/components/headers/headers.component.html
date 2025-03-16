@@ -1,0 +1,10 @@
+<div class="frame-2927">
+  <div class="frame-2995">
+    <h1 class="overview-title">{{ MainTitle }}</h1>
+    <!-- <p class="sub-heading">{{ SubTitle }}</p> -->
+    <div class="frame-2996">
+      <ng-content></ng-content>
+    </div>
+  </div>
+  <p class="sub-heading" *ngIf="SubTitle">{{ SubTitle }}</p>
+</div>

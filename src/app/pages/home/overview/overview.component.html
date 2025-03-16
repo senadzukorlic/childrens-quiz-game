@@ -1,89 +1,87 @@
-<div class="frame-2927">
-  <div class="frame-2995">
-    <h1 class="overview-title">Overview</h1>
+<app-headers [MainTitle]="'Overview'">
+  <div class="notification-button">
+    <span class="notification-text">Notifications</span>
+    <div class="bell-icon">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M14.3552 12H1.6448C1.25911 12 0.944427 11.7185 0.911922 11.3348C0.879419 10.9511 1.1575 10.608 1.53606 10.5397C2.08 10.4395 2.5 9.95983 2.5 9.4V6C2.5 3.51472 4.51472 1.5 7 1.5C9.48528 1.5 11.5 3.51472 11.5 6V9.4C11.5 9.95983 11.92 10.4395 12.4639 10.5397C12.8425 10.608 13.1206 10.9511 13.0881 11.3348C13.0556 11.7185 12.7409 12 12.3552 12Z"
+          fill="#343B6E"
+        />
+        <path
+          d="M7 14.5C7.5 14.5 8 14 8 13.5H6C6 14 6.5 14.5 7 14.5Z"
+          fill="#343B6E"
+        />
+      </svg>
+    </div>
+    <div class="notification-counter">
+      <div class="counter-circle"></div>
+      <span class="counter-text">{{ notificationCount }}</span>
+    </div>
+  </div>
+</app-headers>
 
-    <div class="notification-button">
-      <span class="notification-text">Notifications</span>
-      <div class="bell-icon">
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 16 16"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M14.3552 12H1.6448C1.25911 12 0.944427 11.7185 0.911922 11.3348C0.879419 10.9511 1.1575 10.608 1.53606 10.5397C2.08 10.4395 2.5 9.95983 2.5 9.4V6C2.5 3.51472 4.51472 1.5 7 1.5C9.48528 1.5 11.5 3.51472 11.5 6V9.4C11.5 9.95983 11.92 10.4395 12.4639 10.5397C12.8425 10.608 13.1206 10.9511 13.0881 11.3348C13.0556 11.7185 12.7409 12 12.3552 12Z"
-            fill="#343B6E"
-          />
-          <path
-            d="M7 14.5C7.5 14.5 8 14 8 13.5H6C6 14 6.5 14.5 7 14.5Z"
-            fill="#343B6E"
-          />
-        </svg>
+@if (isHomePage) {
+<div class="frame-2921">
+  <div class="frame-2925">
+    <div class="frame-2940">
+      <div class="frame-2937">
+        <span class="stat-number">{{ stats.inProgress }}</span>
       </div>
-      <div class="notification-counter">
-        <div class="counter-circle"></div>
-        <span class="counter-text">{{ notificationCount }}</span>
+      <div class="frame-2938 bg-rocket">
+        <img src="/assets/icons/home/progress.svg" alt="" />
       </div>
+    </div>
+    <div class="frame-2926">
+      <span class="stat-label">Lesson(s) in progress</span>
     </div>
   </div>
 
-  <div class="frame-2921">
-    <div class="frame-2925">
-      <div class="frame-2940">
-        <div class="frame-2937">
-          <span class="stat-number">{{ stats.inProgress }}</span>
-        </div>
-        <div class="frame-2938 bg-rocket">
-          <img src="/assets/icons/home/progress.svg" alt="" />
-        </div>
+  <div class="frame-2928">
+    <div class="frame-2939">
+      <div class="frame-2934">
+        <span class="stat-number">{{ stats.lessonsCompleted }}</span>
       </div>
-      <div class="frame-2926">
-        <span class="stat-label">Lesson(s) in progress</span>
+      <div class="frame-2938 bg-check">
+        <img src="/assets/icons/home/completed.svg" alt="" />
       </div>
     </div>
+    <div class="frame-2926">
+      <span class="stat-label">Lessons completed</span>
+    </div>
+  </div>
 
-    <div class="frame-2928">
-      <div class="frame-2939">
-        <div class="frame-2934">
-          <span class="stat-number">{{ stats.lessonsCompleted }}</span>
-        </div>
-        <div class="frame-2938 bg-check">
-          <img src="/assets/icons/home/completed.svg" alt="" />
-        </div>
+  <div class="frame-2927">
+    <div class="frame-2941">
+      <div class="frame-2936">
+        <span class="stat-number">{{ stats.categoriesCompleted }}</span>
       </div>
-      <div class="frame-2926">
-        <span class="stat-label">Lessons completed</span>
+      <div class="frame-2938 bg-apps">
+        <img src="/assets/icons/home/categories.svg" alt="" />
       </div>
     </div>
+    <div class="frame-2926">
+      <span class="stat-label">Categories completed</span>
+    </div>
+  </div>
 
-    <div class="frame-2927">
-      <div class="frame-2941">
-        <div class="frame-2936">
-          <span class="stat-number">{{ stats.categoriesCompleted }}</span>
-        </div>
-        <div class="frame-2938 bg-apps">
-          <img src="/assets/icons/home/categories.svg" alt="" />
-        </div>
+  <div class="frame-2929">
+    <div class="frame-2939">
+      <div class="frame-2934">
+        <span class="stat-number">{{ stats.achievements }}</span>
       </div>
-      <div class="frame-2926">
-        <span class="stat-label">Categories completed</span>
+      <div class="frame-2938 bg-trophy">
+        <img src="/assets/icons/home/achievements.svg" alt="" />
       </div>
     </div>
-
-    <div class="frame-2929">
-      <div class="frame-2939">
-        <div class="frame-2934">
-          <span class="stat-number">{{ stats.achievements }}</span>
-        </div>
-        <div class="frame-2938 bg-trophy">
-          <img src="/assets/icons/home/achievements.svg" alt="" />
-        </div>
-      </div>
-      <div class="frame-2926">
-        <span class="stat-label">Achievements</span>
-      </div>
+    <div class="frame-2926">
+      <span class="stat-label">Achievements</span>
     </div>
   </div>
 </div>
+}

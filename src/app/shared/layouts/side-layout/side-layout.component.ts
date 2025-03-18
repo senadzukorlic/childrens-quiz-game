@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
-import { MenuItems } from '../../../core/config/config.menu';
+import { MenuItems } from '../../../core/config/menu.config';
 @Component({
   selector: 'app-side-layout',
   imports: [CommonModule, RouterModule],

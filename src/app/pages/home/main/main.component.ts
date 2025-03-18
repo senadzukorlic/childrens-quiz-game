@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { categories } from '../../../core/config/config.cards';
+import { categories } from '../../../core/config/cards.config';
 import { CategoryCardsComponent } from '../../../shared/components/category-cards/category-cards.component';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';

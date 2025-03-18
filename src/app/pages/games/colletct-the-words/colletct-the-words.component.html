@@ -1,27 +1,45 @@
-<!-- <div
-  style="
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    background-color: aqua;
-    height: 100%;
-  "
-> -->
 <app-headers
-  [SubTitle]="'Select the shapes that match the word.'"
-  [MainTitle]="'Hear the sound and match it to the letter'"
+  [SubTitle]="'Tap the letters to build a valid word.'"
+  [MainTitle]="'Collect a word using the letters below'"
 >
-  <button class="frame-2912">
+  <button class="frame-2912" (click)="skipWord()">
     <span class="skip-text">Skip</span>
   </button></app-headers
 >
-<!-- <div>
-    @for(word of words;track word.id){
+<div class="main">
+  <div class="word-container">
+    @for(letter of randomPermutation;track $index){
     <app-category-cards
       [cardHeight]="80"
       [cardWidth]="80"
-      [title]="word.letters"
+      [title]="letter"
+      (click)="onLetterClick(letter, $index)"
+      [ngClass]="{ 'used-letter': usedLetterMap[$index] }"
     />}
-  </div> -->
-<!-- </div> -->
+  </div>
+  <div class="word-container">
+    @for(position of selectedLetters;track $index){
+    <app-category-cards
+      [cardHeight]="80"
+      [cardWidth]="80"
+      (click)="unClickLetter(position, $index)"
+      [title]="position"
+    />}
+  </div>
+  <button
+    [style.visibility]="currentWordIndex > 0 ? 'visible' : 'hidden'"
+    class="check-button"
+    (click)="resetSelection()"
+  >
+    Reset
+  </button>
+  <button
+    class="check-button"
+    (click)="checkWord()"
+    [style.visibility]="
+      currentWordIndex === randomPermutation.length ? 'visible' : 'hidden'
+    "
+  >
+    Check Word
+  </button>
+</div>

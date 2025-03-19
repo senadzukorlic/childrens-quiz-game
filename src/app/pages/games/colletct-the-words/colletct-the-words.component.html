@@ -3,7 +3,7 @@
   [MainTitle]="'Collect a word using the letters below'"
   [showProgressLine]="true"
   [progressPercentage]="progressPercentage"
-  [progressColors]="['#63B3ED', '#4299E1']"
+  [progressColors]="['#E35CFF', '#3387FF', '#25EC77']"
 >
   <button class="frame-2912" (click)="skipWord()">
     <span class="skip-text">Skip</span>
@@ -45,12 +45,11 @@
   >
     Check Word
   </button>
-
-  <div class="main" *ngIf="solvedWordsIndices.length >= totalWords">
-    <div class="completion-message">
-      <h2>Čestitamo!</h2>
-      <p>Uspješno ste riješili sve riječi!</p>
-      <button class="check-button" (click)="resetGame()">Igraj ponovo</button>
-    </div>
-  </div>
 </div>
+
+<app-achievement
+  *ngIf="solvedWordsIndices.length >= totalWords"
+  [percentage]="100"
+  achievementText="Achievement earned! Completed your first word game!"
+  circleColor="#343B6E"
+></app-achievement>

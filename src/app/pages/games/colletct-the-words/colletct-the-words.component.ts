@@ -3,17 +3,22 @@ import { CategoryCardsComponent } from '../../../shared/components/category-card
 import { CommonModule } from '@angular/common';
 import { WORDS } from '../../../core/config/word-games.config';
 import { HeadersComponent } from '../../../shared/components/headers/headers.component';
-
+import { AchievementComponent } from '../../../shared/components/achievement/achievement.component';
 @Component({
   selector: 'app-colletct-the-words',
-  imports: [CategoryCardsComponent, CommonModule, HeadersComponent],
+  imports: [
+    CategoryCardsComponent,
+    CommonModule,
+    HeadersComponent,
+    AchievementComponent,
+  ],
   templateUrl: './colletct-the-words.component.html',
   styleUrl: './colletct-the-words.component.css',
 })
 export class ColletctTheWordsComponent {
-  words = WORDS.slice(0, 10);
+  words = WORDS.slice(0, 1);
   solvedWords = 0;
-  totalWords = 10;
+  totalWords = 1;
   progressPercentage = 0;
 
   word = this.words[Math.floor(Math.random() * this.words.length)];
@@ -33,15 +38,7 @@ export class ColletctTheWordsComponent {
   initializeWord(): void {
     if (this.solvedWordsIndices.length >= this.totalWords) {
       this.progressPercentage = 100;
-      console.log('Čestitamo! Riješili ste sve riječi!');
-
       return;
-    }
-
-    if (this.solvedWordsIndices.length === this.totalWords) {
-      this.solvedWordsIndices = [];
-      this.solvedWords = 0;
-      this.progressPercentage = 0;
     }
 
     let availableIndices = Array.from(
@@ -140,6 +137,11 @@ export class ColletctTheWordsComponent {
         this.solvedWordsIndices.push(currentWordIndex);
         this.solvedWords++;
         this.updateProgress();
+        if (this.solvedWords >= this.totalWords) {
+          // Osiguravamo da je procenat 100%
+          this.progressPercentage = 100;
+          return; // Ne pozivamo initializeWord() ako je igra gotova
+        }
       }
 
       this.initializeWord();

@@ -9,4 +9,7 @@ import { CommonModule } from '@angular/common';
 export class HeadersComponent {
   @Input() MainTitle!: string;
   @Input() SubTitle: string = '';
+  @Input() showProgressLine: boolean = false;
+  @Input() progressPercentage: number = 0;
+  @Input() progressColors: string[] = ['#63B3ED', '#4299E1'];
 }

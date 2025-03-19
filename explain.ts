@@ -11,13 +11,13 @@ import { HeadersComponent } from '../../../shared/components/headers/headers.com
   styleUrl: './colletct-the-words.component.css',
 })
 export class ColletctTheWordsComponent {
-  words = WORDS.slice(0, 10);
-  solvedWords = 0;
-  totalWords = 10;
-  progressPercentage = 0;
+  words = WORDS.slice(0, 10); // Ograničavamo na 10 riječi
+  solvedWords = 0; // Brojač riješenih riječi
+  totalWords = 10; // Ukupan broj riječi
+  progressPercentage = 0; // Procenat napretka
 
   word = this.words[Math.floor(Math.random() * this.words.length)];
-  solvedWordsIndices: number[] = [];
+  solvedWordsIndices: number[] = []; // Pratimo indekse riješenih riječi
 
   permutedWord: string[] = [];
   randomPermutation: string = '';
@@ -35,15 +35,19 @@ export class ColletctTheWordsComponent {
       this.progressPercentage = 100;
       console.log('Čestitamo! Riješili ste sve riječi!');
 
-      return;
+      // Možda prikaži poruku umjesto nove riječi
+      // ili dodaj dugme za ponovno igranje
+      return; // Važno - izađi iz funkcije da ne inicijalizira novu riječ
     }
 
+    // Ako su sve riječi riješene, resetujemo igru
     if (this.solvedWordsIndices.length === this.totalWords) {
       this.solvedWordsIndices = [];
       this.solvedWords = 0;
       this.progressPercentage = 0;
     }
 
+    // Biramo nasumičnu riječ koju još nismo riješili
     let availableIndices = Array.from(
       { length: this.words.length },
       (_, i) => i
@@ -132,16 +136,19 @@ export class ColletctTheWordsComponent {
     if (formedWord === this.word.word) {
       console.log('Tačna reč!');
 
+      // Pronađi indeks trenutne riječi
       const currentWordIndex = this.words.findIndex(
         (w) => w.word === this.word.word
       );
 
+      // Ako riječ još nije označena kao riješena, dodaj je
       if (!this.solvedWordsIndices.includes(currentWordIndex)) {
         this.solvedWordsIndices.push(currentWordIndex);
         this.solvedWords++;
         this.updateProgress();
       }
 
+      // Prelazimo na sljedeću riječ
       this.initializeWord();
     } else {
       console.log('Netačna reč!');

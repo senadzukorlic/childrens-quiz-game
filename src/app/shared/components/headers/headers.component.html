@@ -7,4 +7,12 @@
     </div>
   </div>
   <p class="sub-heading" *ngIf="SubTitle">{{ SubTitle }}</p>
+  <div class="progress-container" *ngIf="showProgressLine">
+    <div
+      class="progress-bar"
+      [style.width.%]="progressPercentage"
+      [style.--start-color]="progressColors[0]"
+      [style.--end-color]="progressColors[1]"
+    ></div>
+  </div>
 </div>

@@ -2,45 +2,56 @@
   [SubTitle]="'Tap the letters to build a valid word.'"
   [MainTitle]="'Collect a word using the letters below'"
   [showProgressLine]="true"
-  [progressPercentage]="progressPercentage"
+  [progressPercentage]="wordGame.progressPercentage"
   [progressColors]="['#E35CFF', '#3387FF', '#25EC77']"
 >
   <button class="frame-2912" (click)="skipWord()">
     <span class="skip-text">Skip</span>
-  </button></app-headers
+  </button>
+</app-headers>
+
+<div
+  class="main"
+  *ngIf="wordGame.solvedWordsIndices.length < wordGame.totalWords"
 >
-<div class="main" *ngIf="solvedWordsIndices.length < totalWords">
   <div class="word-container">
-    @for(letter of randomPermutation;track $index){
+    @for(letter of wordGame.randomPermutation; track $index) {
     <app-category-cards
       [cardHeight]="80"
       [cardWidth]="80"
       [title]="letter"
       (click)="onLetterClick(letter, $index)"
-      [ngClass]="{ 'used-letter': usedLetterMap[$index] }"
-    />}
+      [ngClass]="{ 'used-letter': wordGame.usedLetterMap[$index] }"
+    />
+    }
   </div>
+
   <div class="word-container">
-    @for(position of selectedLetters;track $index){
+    @for(position of wordGame.selectedLetters; track $index) {
     <app-category-cards
       [cardHeight]="80"
       [cardWidth]="80"
-      (click)="unClickLetter(position, $index)"
       [title]="position"
-    />}
+      (click)="unClickLetter(position, $index)"
+    />
+    }
   </div>
+
   <button
-    [style.visibility]="currentWordIndex > 0 ? 'visible' : 'hidden'"
     class="check-button"
     (click)="resetSelection()"
+    [style.visibility]="wordGame.currentWordIndex > 0 ? 'visible' : 'hidden'"
   >
     Reset
   </button>
+
   <button
     class="check-button"
     (click)="checkWord()"
     [style.visibility]="
-      currentWordIndex === randomPermutation.length ? 'visible' : 'hidden'
+      wordGame.currentWordIndex === wordGame.randomPermutation.length
+        ? 'visible'
+        : 'hidden'
     "
   >
     Check Word
@@ -48,8 +59,8 @@
 </div>
 
 <app-achievement
-  *ngIf="solvedWordsIndices.length >= totalWords"
+  *ngIf="wordGame.solvedWordsIndices.length >= wordGame.totalWords"
   [percentage]="100"
   achievementText="Achievement earned! Completed your first word game!"
   circleColor="#343B6E"
-></app-achievement>
+/>

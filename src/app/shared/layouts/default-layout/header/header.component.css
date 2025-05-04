@@ -5,10 +5,10 @@
 .frame-2 {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between; /* Promena sa center na space-between */
   align-items: center;
-  padding: 10px 40px;
-  gap: 10px;
+  padding: 10px 20px; /* Smanjio padding sa strana */
+  gap: 5px; /* Smanjio gap između glavnih elemenata */
   position: relative;
   width: 100%;
   max-width: 1920px;
@@ -20,9 +20,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
-  gap: 10px;
-  width: 213px;
+  justify-content: flex-start;
+  padding-left: 5px; /* Smanjio padding sa leve strane */
+  gap: 5px; /* Smanjio gap */
+  min-width: 180px; /* Smanjio minimalnu širinu */
   height: 96px;
   flex: none;
   order: 0;
@@ -30,14 +31,14 @@
 }
 
 .company-name {
-  width: 213px;
+  width: auto;
   height: 96px;
   font-family: "Catchy Melody", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
   line-height: 48px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.02em;
   color: #ffedc4;
   text-shadow: -3px 2px 0px #343b6e;
@@ -46,7 +47,6 @@
   flex-grow: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .frame-24 {
@@ -55,8 +55,8 @@
   justify-content: center;
   align-items: center;
   padding: 0px;
-  gap: 10px;
-  width: 1236px;
+  gap: 5px; /* Smanjio gap između navegacionih elemenata */
+  width: auto; /* Promenio sa fiksne širine na auto */
   height: 44px;
   flex: none;
   order: 1;
@@ -72,8 +72,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 12px 20px;
-  gap: 10px;
+  padding: 12px 15px; /* Smanjio horizontalni padding sa 20px na 15px */
+  gap: 5px; /* Smanjio gap */
   height: 44px;
   background: #ffe3a5;
   border-radius: 100px;
@@ -124,8 +124,8 @@
   flex-direction: row;
   align-items: center;
   padding: 0px;
-  gap: 10px;
-  width: 371px;
+  gap: 5px; /* Smanjio gap sa 10px na 5px */
+  width: auto; /* Promenio sa fiksne širine na auto */
   height: 44px;
   flex: none;
   order: 2;
@@ -137,9 +137,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 12px 20px;
-  gap: 10px;
-  width: 116px;
+  padding: 12px 15px; /* Smanjio horizontalni padding sa 20px na 15px */
+  gap: 5px; /* Smanjio gap */
+  width: auto; /* Promenio sa fiksne širine */
+  min-width: 100px; /* Dodao minimalnu širinu */
   height: 44px;
   background: #ffe3a5;
   border-radius: 100px;
@@ -176,9 +177,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 12px 20px;
-  gap: 10px;
-  width: 83px;
+  padding: 12px 15px; /* Smanjio horizontalni padding sa 20px na 15px */
+  gap: 5px; /* Smanjio gap */
+  width: auto; /* Promenio sa fiksne širine */
+  min-width: 70px; /* Dodao minimalnu širinu */
   height: 44px;
   border-radius: 100px;
   flex: none;
@@ -207,9 +209,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 12px 20px;
-  gap: 10px;
-  width: 152px;
+  padding: 12px 15px; /* Smanjio horizontalni padding sa 20px na 15px */
+  gap: 5px; /* Smanjio gap */
+  width: auto; /* Promenio sa fiksne širine */
+  min-width: 140px; /* Dodao minimalnu širinu */
   height: 44px;
   background: #f15d41;
   border-width: 1px 1px 0px 1px;

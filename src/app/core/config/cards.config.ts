@@ -54,28 +54,28 @@ export const categories: Category[] = [
     icon: '/assets/icons/overview/cat.svg',
     route: '/lessons',
   },
-  {
-    id: 9,
-    title: 'Back To School',
-    icon: '/assets/icons/overview/school.svg',
-    route: '/lessons',
-  },
-  {
-    id: 10,
-    title: 'Body',
-    icon: '/assets/icons/overview/person.svg',
-    route: '/lessons',
-  },
-  {
-    id: 11,
-    title: 'Home',
-    icon: '/assets/icons/overview/house.svg',
-    route: '/lessons',
-  },
-  {
-    id: 12,
-    title: 'Transport',
-    icon: '/assets/icons/overview/car.svg',
-    route: '/lessons',
-  },
+  // {
+  //   id: 9,
+  //   title: 'Back To School',
+  //   icon: '/assets/icons/overview/school.svg',
+  //   route: '/lessons',
+  // },
+  // {
+  //   id: 10,
+  //   title: 'Body',
+  //   icon: '/assets/icons/overview/person.svg',
+  //   route: '/lessons',
+  // },
+  // {
+  //   id: 11,
+  //   title: 'Home',
+  //   icon: '/assets/icons/overview/house.svg',
+  //   route: '/lessons',
+  // },
+  // {
+  //   id: 12,
+  //   title: 'Transport',
+  //   icon: '/assets/icons/overview/car.svg',
+  //   route: '/lessons',
+  // },
 ];

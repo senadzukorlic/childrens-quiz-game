@@ -7,7 +7,7 @@
   padding: 24px;
   gap: 10px;
   isolation: isolate;
-  width: 377px;
+  width: 100%; /* Promena sa fiksne širine na 100% */
   height: 200px;
   background: #ffffff;
   border: 4px solid #dfdfdf;
@@ -15,6 +15,8 @@
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+  max-width: 377px; /* Maksimalna širina ostaje ista */
+  margin: 0 auto; /* Centriranje kartice */
 }
 
 .cloud-background {
@@ -24,7 +26,7 @@
   left: 168.83px;
   top: 33.14px;
   transform: rotate(-4deg);
-  background-image: url('../../../../../public/assets/icons/overview/cloudss.svg');
+  background-image: url("../../../../../public/assets/icons/overview/cloudss.svg");
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.2;
@@ -34,7 +36,8 @@
 .card-title {
   width: auto;
   max-width: 70%;
-  height: 24px;
+  height: auto; /* Promena sa fiksne visine da dozvoli višelinijski tekst */
+  min-height: 24px;
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 700;
